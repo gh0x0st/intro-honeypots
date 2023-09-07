@@ -410,7 +410,7 @@ Now we will turn our attention to the default config file which only requires on
 This setting is controlled by the `SecRuleEngine` directive that is set to ‘DetectionOnly’. We will need to change this to ‘On’ it will detect and block traffic.
 
 ```
-sudo sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/' /etc/modsecurity/modsecurity.conf
+lab@support:~$ sudo sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/' /etc/modsecurity/modsecurity.conf
 ```
 > Listing - Configuring ModSecurity to detect and block traffic
 
@@ -739,9 +739,9 @@ It is important to make sure that this file is not accessible from the web serve
 For now we will create the log at `/var/www/logons.txt` and apply the necessary permissions for the `www-data` account.
 
 ```
-sudo touch /var/www/logons.txt
-sudo chown www-data:www-data /var/www/logons.txt
-sudo chmod 644 /var/www/logons.txt
+lab@support:~$ sudo touch /var/www/logons.txt
+lab@support:~$ sudo chown www-data:www-data /var/www/logons.txt
+lab@support:~$ sudo chmod 644 /var/www/logons.txt
 ```
 > Listing - Creating our log file for authentication attempts
 

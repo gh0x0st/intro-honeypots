@@ -678,7 +678,9 @@ Now this is where we start getting sneaky with our inclusion of PHP. Our landing
 ?>
 ```
 > Listing - PHP code to display incorrect username or password
+
 While that code is more so added here to keep our page appear more realistic, the devious activity occurs within our post.php page which is displayed in the listing below.
+
 ```
 <?php
 // Sleep for two seconds to simulate validation

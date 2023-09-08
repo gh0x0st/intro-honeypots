@@ -186,21 +186,6 @@ lab@support:~$ sudo sed -i 's/ServerSignature On/ServerSignature Off/' /etc/apac
 ```
 > Listing - Modifying the ServerSignature directive
 
-Now we will disable the inclusion of frames to prevent clickjacking by removing the comment from the `Header set X-Frame-Options: "sameorigin` setting.
-
-```
-lab@support:~$ sudo sed -i 's/#Header set X-Frame-Options: "sameorigin"/Header set X-Frame-Options: "sameorigin"/' /etc/apache2/conf-available/security.conf
-```
-> Listing - Prevent clickjacking
-
-Next we will prevent MIME from interpreting files as something else than declared by the content type in the HTTP headers.
-
-```
-lab@support:~$ sudo sed -i 's/#Header set X-Content-Type-Options: "nosniff"/Header set X-Content-Type-Options: "nosniff"/' /etc/apache2/conf-available/security.conf
-```
-> Listing - Prevent MIME type manipulation
-
-
 Now let’s save our modified config file and restart the web service. 
 
 ```
@@ -217,9 +202,7 @@ http://192.168.0.7 [200 OK] Apache, Country[RESERVED][ZZ], HTTPServer[Apache], I
 ```
 > Listing - Running whatweb against our web server
 
-Perfect, this time we are not getting specific server information anymore. Although _Apache_ is revealed, this isn’t much of a big deal as opposed to the exact version number. 
-
-Next we will browse back to an invalid page to ensure server details are no longer being displayed. 
+Perfect, this time we are not getting specific server information anymore. Although _Apache_ is revealed, this isn’t much of a big deal as opposed to the exact version number. Next we will browse back to an invalid page to ensure server details are no longer being displayed. 
 
 ![](./screenshots/5-error-page-fixed.png)
 > Figure - Details no longer exposed with non-existent page

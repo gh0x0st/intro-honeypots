@@ -834,7 +834,7 @@ With everything in place, let's go ahead and attempt a login and make sure that 
 
 ```
 lab@support:~$ cat /var/www/logons.txt
-Username: blueteamers | Password: havemorefun | Remote IP: 2023-08-23 12:19:27 | 192.168.0.4 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.54
+2023-08-23 12:19:27 | Username: blueteamers | Password: havemorefun | Remote IP: 192.168.0.4 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.54
 ```
 > Listing - Verifying our test logon was logged
 
